@@ -1,0 +1,27 @@
+
+<div class="container mt-5">
+  <h1>Best Cocktails</h1>
+
+  <table class='table'>
+    <thead>
+      <tr>
+        <th><b>Pick yours</b></th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @cocktails.each do |cocktail| %>
+        <tr>
+          <td><%= link_to cocktail.name, cocktail_path(cocktail) %></td>
+                 
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <p>
+    <%= link_to 'Create you own Cocktail', new_cocktail_path, class: 'btn btn-success mt-2' %>
+  </p>
+  <br>
+</div>
